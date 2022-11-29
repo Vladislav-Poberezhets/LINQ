@@ -17,5 +17,10 @@ namespace LINQ
             Latitude = latitude;
             Longitude = longitude;
         }
+        public double Distance(GeoCordinate a)
+        {
+            return Math.Sqrt(Math.Pow(Latitude - a.Latitude, 2) +
+                   Math.Pow(Longitude - a.Longitude, 2));
+        }
     }
 }
